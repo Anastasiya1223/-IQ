@@ -218,12 +218,12 @@ namespace Тест_на_IQ
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            if (n == 3|| (n>5&&n<11))
+            if (n == 3 || (n>5 && n<11 ))
             {
                 if (textBox1.Text != "")
                 {
                     saveTextBoxMessage(int.Parse(textBox1.Text));
-                    textBox1.Clear();
+                    textBox1.Text="";
                 }
             }
             n--;
@@ -235,11 +235,12 @@ namespace Тест_на_IQ
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            if (n == 3)
+            if (n == 3 || (n > 5 && n < 11))
             {
                 if (textBox1.Text != "")
                 {
                     saveTextBoxMessage(int.Parse(textBox1.Text));
+                    textBox1.Text = "";
                 }
             }
             n++;
@@ -367,7 +368,7 @@ namespace Тест_на_IQ
             }
             else if(iq > 130 && iq <= 145)
             {
-                label2.Text += "Вы конкурент В.В.Путину)";
+                label2.Text += "Ваш IQ как у Джессики Альбы";
             }
             else if (iq > 90 && iq <= 130)
             {
@@ -375,11 +376,11 @@ namespace Тест_на_IQ
             }
             else if(iq > 70 && iq  <= 90)
             {
-                label2.Text += "Ваш интелект на уровне обезъяны";
+                label2.Text += "Ваш интелект как у Сильвестрф Сталлоне ";
             }
             else if(iq > 40 && iq <= 70)
             {
-                label2.Text += "Похоже вы собака...";
+                label2.Text += "Позанимайтесь ещё)";
             }
             else if (iq > 0 && iq <= 40)
             {
