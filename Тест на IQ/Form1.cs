@@ -361,8 +361,11 @@ namespace Тест_на_IQ
             radioButton5.Visible = false;
             radioButton6.Visible = false;
             label2.Text = "Ваш IQ: \n"
+
                 + iq.ToString("00.")+"\n";
-            if(iq > 145)
+            string path = @"C:\Users\polue\Downloads\IQ_Test-master (2)\IQ_Test-master\Тест на IQ\Results.txt";
+            System.IO.File.AppendAllText(path, " "+ DateTime.Now +" Ваш IQ:"+ iq );
+            if (iq > 145)
             {
                 label2.Text += "Еще чуть-чуть и вы Билл Гейтс";
             }
